@@ -1,0 +1,28 @@
+.test-row {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 10px 0px; }
+  .test-row .test-column-and-row {
+    border: solid 1px #cccccc;
+    position: relative; }
+    .test-row .test-column-and-row > .test-content {
+      position: absolute;
+      top: 0; }
+
+@media only screen and (min-width: 991px) {
+  .test-row .test-column-and-row {
+    width: 50%;
+    padding-top: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: -1px; } }
+@media only screen and (max-width: 992px) {
+  .test-row .test-column-and-row {
+    width: 100%;
+    padding-top: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: -1px; } }
+
+/*# sourceMappingURL=test.css.map */

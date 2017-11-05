@@ -1,0 +1,53 @@
+@function compute-width($num-cols) {
+  @return (100% / $num-cols);
+}
+
+@function compute-height-base-on-width($col-width){
+
+	@return ( 100% / $num-cols );
+}
+
+.test-row{
+	width:1200px;
+	max-width: 100%;
+	margin:0px auto;
+	padding:10px 0px;
+	.test-column-and-row{
+
+		border: solid 1px #cccccc;
+		position: relative;		
+		> .test-content{
+			position:absolute;
+			top: 0;
+		}
+
+	}
+}
+
+@media only screen and (min-width : 991px) {
+
+	.test-row{
+
+		.test-column-and-row{
+			width: compute-width(2);
+			padding-top: compute-width(2);
+			display: inline-block;
+			box-sizing: border-box;
+			margin: -1px;
+		}
+	}
+}
+
+@media only screen and (max-width : 992px) {
+
+	.test-row{
+
+		.test-column-and-row{
+			width: compute-width(1);
+			padding-top: compute-width(2);
+			display: inline-block;
+			box-sizing: border-box;
+			margin: -1px;
+		}
+	}
+}
